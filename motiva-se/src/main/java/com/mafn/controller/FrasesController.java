@@ -41,7 +41,7 @@ public class FrasesController {
     @GetMapping(value = "/{id}")
     @ResponseBody
     public ResponseEntity<ResponseFraseDTO> obterFrasePorId(@PathVariable Integer id) {
-        Optional<Frase> fraseByIdOptional = frasesService.obterFrasePorId(id);
+        Optional<Frase> fraseByIdOptional = frasesService.obterFrasePorId();
         if (!fraseByIdOptional.isEmpty()) {
             Frase frase = fraseByIdOptional.get();
             ResponseFraseDTO fraseDTO = new ResponseFraseDTO(frase);

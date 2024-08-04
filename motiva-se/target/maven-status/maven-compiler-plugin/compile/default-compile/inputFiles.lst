@@ -1,0 +1,9 @@
+C:\dev\spring\motiva-se\motiva-se\src\main\java\com\mafn\App.java
+C:\dev\spring\motiva-se\motiva-se\src\main\java\com\mafn\configuration\WebConfig.java
+C:\dev\spring\motiva-se\motiva-se\src\main\java\com\mafn\controller\FrasesController.java
+C:\dev\spring\motiva-se\motiva-se\src\main\java\com\mafn\dto\ResponseFraseDTO.java
+C:\dev\spring\motiva-se\motiva-se\src\main\java\com\mafn\models\Autor.java
+C:\dev\spring\motiva-se\motiva-se\src\main\java\com\mafn\models\Frase.java
+C:\dev\spring\motiva-se\motiva-se\src\main\java\com\mafn\repository\AutoresRepository.java
+C:\dev\spring\motiva-se\motiva-se\src\main\java\com\mafn\repository\FrasesRepository.java
+C:\dev\spring\motiva-se\motiva-se\src\main\java\com\mafn\service\FrasesService.java

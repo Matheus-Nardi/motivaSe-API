@@ -1,6 +1,7 @@
 package com.mafn.service;
 
 import java.util.Optional;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,13 +32,21 @@ public class FrasesService {
         return frasesRepository.save(frase);
     }
 
-    public Optional<Frase> obterFrasePorId(Integer id) {
-        log.info("Obtendo a frase de id [{}]", id);
-        return frasesRepository.findById(id);
+    public Optional<Frase> obterFrasePorId() {
+        Integer randomId = obterIdAleatorio();
+        log.info("Obtendo a frase de id [{}]", randomId);
+        return frasesRepository.findById((Integer)randomId);
+    }
+
+    private Integer obterIdAleatorio() {
+        long qtdRegistros = frasesRepository.count();
+        Integer qtdInteger = (int) qtdRegistros;
+        Random random = new Random();
+        return random.nextInt(qtdInteger + 1);
     }
 
     public boolean deletarFrase(Integer id) {
-        Optional<Frase> fraseOptional = this.obterFrasePorId(id);
+        Optional<Frase> fraseOptional = frasesRepository.findById(id);
         if (!fraseOptional.isEmpty()) {
             log.info("Frase de id [{}] deletada", id);
             frasesRepository.delete(fraseOptional.get());
@@ -48,7 +57,7 @@ public class FrasesService {
     }
 
     public Optional<Frase> atualizarFrase(Integer id, Frase fraseUpdate) {
-        Optional<Frase> fraseOptional = this.obterFrasePorId(id);
+        Optional<Frase> fraseOptional = frasesRepository.findById(id);
         if (!fraseOptional.isEmpty()) {
             log.info("Frase de id [{}] encontrada e será atualizada", id);
             Frase fraseFromDb = fraseOptional.get();

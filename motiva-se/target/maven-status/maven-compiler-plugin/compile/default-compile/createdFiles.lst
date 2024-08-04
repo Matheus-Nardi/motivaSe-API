@@ -1,0 +1,9 @@
+com\mafn\controller\FrasesController.class
+com\mafn\repository\FrasesRepository.class
+com\mafn\models\Frase.class
+com\mafn\service\FrasesService.class
+com\mafn\repository\AutoresRepository.class
+com\mafn\configuration\WebConfig.class
+com\mafn\App.class
+com\mafn\models\Autor.class
+com\mafn\dto\ResponseFraseDTO.class
