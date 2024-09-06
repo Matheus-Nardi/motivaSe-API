@@ -40,7 +40,7 @@ Para instalar o projeto, siga os passos abaixo:
    ```
 
 ## Desfrute da aplicação completa 
-Com o backend rodando localmente agora voce pode acessar o front da aplicação em: 
+Com o backend rodando localmente agora voce pode acessar o front da aplicação em: [Frontend](https://github.com/Matheus-Nardi/motivaSe-front/blob/main/README.md)
 
 ## Stack Utilizada 🖥️
 
